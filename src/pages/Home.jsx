@@ -252,7 +252,7 @@ const Home = () => {
                 </Link>
                 
                 <a
-                  href="https://play.google.com/store/apps/details?id=com.materialbase.app"
+                  href="https://play.google.com/store/apps/details?id=com.materialbase.materialbase&pcampaignid=web_share"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-medium py-3 px-4 sm:px-6 lg:py-4 lg:px-8 rounded-full transition-all duration-300 transform hover:scale-105 border border-white/20 text-sm sm:text-base"
@@ -684,7 +684,7 @@ const Home = () => {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="https://play.google.com/store/apps/details?id=com.materialbase.app"
+                href="https://play.google.com/store/apps/details?id=com.materialbase.materialbase&pcampaignid=web_share"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-3 bg-white text-purple-600 font-bold py-3 px-6 lg:py-4 lg:px-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300"
@@ -834,7 +834,7 @@ const Home = () => {
               </Link>
               
               <a
-                href="https://play.google.com/store/apps/details?id=com.materialbase.app"
+                href="https://play.google.com/store/apps/details?id=com.materialbase.materialbase&pcampaignid=web_share"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-medium py-3 px-4 sm:px-6 lg:py-4 lg:px-8 rounded-full transition-all duration-300 transform hover:scale-105 border border-white/20 flex items-center justify-center space-x-2 text-sm sm:text-base"
