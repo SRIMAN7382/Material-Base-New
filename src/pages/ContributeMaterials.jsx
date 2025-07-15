@@ -422,6 +422,7 @@ const ContributeMaterials = () => {
                     <span>Submit Materials</span>
                     <Sparkles className="w-5 h-5" />
                   </>
+                  
                 )}
               </motion.button>
               
@@ -432,7 +433,7 @@ const ContributeMaterials = () => {
           </form>
         </motion.div>
 
-        {/* Success/Error Messages */}
+        {/* Success/Error Messages */}2
         <AnimatePresence>
           {submitStatus && (
             <motion.div
