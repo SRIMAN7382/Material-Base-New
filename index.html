@@ -1,28 +1,140 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Material Base - Learning Made Easy</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Google Identity Services -->
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-    
-    <!-- Google Analytics (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NSTPVN7RV6"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-NSTPVN7RV6');
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="3;url=https://materialbase.netlify.app/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting - Material Base</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+      color: white;
+      text-align: center;
+    }
+
+    .glow-bg {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+      animation: bgMove 8s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes bgMove {
+      0% { transform: translate(0, 0); }
+      50% { transform: translate(20px, 30px); }
+      100% { transform: translate(0, 0); }
+    }
+
+    .content {
+      z-index: 1;
+      animation: fadeInZoom 1.5s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeInZoom {
+      0% {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    .logo {
+      height: 90px;
+      margin-bottom: 25px;
+      animation: popIn 1s ease-in-out;
+    }
+
+    @keyframes popIn {
+      0% {
+        transform: scale(0.7);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      animation: slideUp 1.2s ease forwards;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      animation: slideUp 1.6s ease forwards;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .loader {
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-top: 4px solid #fff;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      margin: 30px auto 0;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .fallback {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #eee;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="glow-bg"></div>
+
+  <div class="content">
+    <img src="images/logok.png" alt="Material Base Logo" class="logo">
+    <h1>We're Redirecting You</h1>
+    <p>Hang tight! You're being sent to our new homepage...</p>
+    <div class="loader"></div>
+    <a href="https://hub.sastra.edu/sastranet/materialhub" class="fallback">Click here if not redirected</a>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "https://materialbase.netlify.app/";
+    }, 3000);
+  </script>
+</body>
 </html>
