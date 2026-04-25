@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="3;url=https://materialbase.netlify.app/" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Redirecting - Material Base</title>
 
   <style>
@@ -12,11 +12,10 @@
       padding: 0;
       height: 100vh;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       background: linear-gradient(135deg, #6e8efb, #a777e3);
-      font-family: 'Segoe UI', sans-serif;
+      font-family: "Segoe UI", sans-serif;
       overflow: hidden;
       color: white;
       text-align: center;
@@ -28,7 +27,11 @@
       left: -50%;
       width: 200%;
       height: 200%;
-      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+      background: radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 60%
+      );
       animation: bgMove 8s linear infinite;
       z-index: 0;
     }
@@ -59,41 +62,16 @@
     .logo {
       height: 90px;
       margin-bottom: 25px;
-      animation: popIn 1s ease-in-out;
-    }
-
-    @keyframes popIn {
-      0% {
-        transform: scale(0.7);
-        opacity: 0;
-      }
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
     }
 
     h1 {
       font-size: 2.5rem;
       margin: 0;
-      animation: slideUp 1.2s ease forwards;
     }
 
     p {
       font-size: 1.2rem;
       margin-top: 10px;
-      animation: slideUp 1.6s ease forwards;
-    }
-
-    @keyframes slideUp {
-      from {
-        transform: translateY(20px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
     }
 
     .loader {
@@ -113,28 +91,38 @@
     }
 
     .fallback {
+      display: inline-block;
       margin-top: 20px;
-      font-size: 0.9rem;
-      color: #eee;
+      font-size: 0.95rem;
+      color: #ffffff;
       text-decoration: underline;
     }
   </style>
 </head>
+
 <body>
   <div class="glow-bg"></div>
 
   <div class="content">
-    <img src="images/logok.png" alt="Material Base Logo" class="logo">
-    <h1>We're Redirecting You</h1>
-    <p>Hang tight! You're being sent to our new homepage...</p>
+    <img src="images/logok.png" alt="Material Base Logo" class="logo" />
+
+    <h1>Redirecting You</h1>
+    <p>Taking you to SASTRA Material Hub login...</p>
+
     <div class="loader"></div>
-    <a href="https://hub.sastra.edu/sastranet/materialhub/login">Click here if not redirected</a>
+
+    <!-- ✅ Correct fallback link -->
+    <a href="https://hub.sastra.edu/sastranet/materialhub" class="fallback">
+      Click here if not redirected
+    </a>
   </div>
 
   <script>
-    setTimeout(() => {
-      window.location.href = "https://materialbase.netlify.app/";
-    }, 3000);
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        window.location.replace("https://hub.sastra.edu/sastranet/materialhub");
+      }, 3000);
+    });
   </script>
 </body>
 </html>
